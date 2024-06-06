@@ -47,6 +47,7 @@ body {
 
 h1{
   font-size: 24px;
+  margin: 0;
 }
 
 h2{
@@ -162,7 +163,6 @@ small{
   align-items: center;
   border-radius: 7px;
   margin-top: 25px;
-  padding: 0 14px;
   position: sticky;
   top: 7px;
   z-index: 1;
@@ -170,6 +170,7 @@ small{
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
+  padding: 14px;
 }
 
 @media (max-width: 768px) {
