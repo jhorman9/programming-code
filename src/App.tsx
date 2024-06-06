@@ -17,7 +17,7 @@ const App: React.FC = () => {
 
   return (
     <>
-    <div style={{height: '100%'}}>
+    <div className='container-principal'>
       <div className='top-container'>
         <h2>Códigos de programación</h2>
         <div>
