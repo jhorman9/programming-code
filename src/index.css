@@ -45,6 +45,26 @@ body {
   min-height: calc(100vh - 30px);
 }
 
+h1{
+  font-size: 24px;
+}
+
+h2{
+  font-size: 20px;
+}
+
+small {
+  font-size: 11px;
+  font-weight: 700;
+  background-color: #ffffff40;
+  box-shadow: 0 0 10px #ffffff40;
+  padding: 7px 14px;
+  border-radius: 7px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+}
+
 .container-principal{
   min-height: calc(-67px + 100vh);
   height: 100%;
@@ -56,10 +76,6 @@ body {
   height: 100%;
   padding: 0 14px;
   min-height: 100vh;
-}
-
-h2{
-  text-align: center;
 }
 
 .code-container {
@@ -177,7 +193,7 @@ section:last-child{
 }
 
 footer{
-  background-color: black;
+  background-color: #000000b0;
   padding: 7px 14px;
   margin-left: -14px;  
   width: 100%;

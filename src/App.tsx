@@ -9,6 +9,14 @@ const App: React.FC = () => {
     setSelectedLanguage(event.target.value);
   };
 
+  if (codeExamples.length === 0) {
+
+    return (
+      <div className='container-principal'></div>
+
+    )
+  }
+
   const filteredExamples = selectedLanguage === 'Todos'
     ? codeExamples
     : codeExamples.filter(example =>
@@ -19,7 +27,7 @@ const App: React.FC = () => {
     <>
     <div className='container-principal'>
       <div className='top-container'>
-        <h2>Códigos de programación</h2>
+        <h1>Códigos de programación</h1>
         <div>
           <select id="language-select" title='Selecciona un lenguaje' value={selectedLanguage} onChange={handleLanguageChange}>
             <option value="Todos">Todos</option>

@@ -44,7 +44,7 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ code, language, title, descriptio
   return (
     <>
     <section>
-      <h3>{title}</h3>
+      <h2>{title}</h2>
       <small>{language}</small>
       <div className="code-container">
         <button className="copy-button" onClick={copyToClipboard}>Copiar</button>
