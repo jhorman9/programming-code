@@ -83,6 +83,7 @@ h2{
 
 .code-container pre{
   text-wrap: wrap;
+  word-break: break-all;
 }
 
 .copy-button {
