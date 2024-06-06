@@ -16,18 +16,18 @@ const App: React.FC = () => {
       );
 
   return (
-    <div>
+    <>
+    <div style={{height: '100%'}}>
       <div className='top-container'>
         <h2>Códigos de programación</h2>
         <div>
-          <select id="language-select" value={selectedLanguage} onChange={handleLanguageChange}>
+          <select id="language-select" title='Selecciona un lenguaje' value={selectedLanguage} onChange={handleLanguageChange}>
             <option value="Todos">Todos</option>
             <option value="PHP">Php</option>
             <option value="JavaScript">JavaScript</option>
             <option value="HTML">Html</option>
             <option value="CSS">Css
             </option>
-            {/* Añadir más opciones según sea necesario */}
           </select>
         </div>
       </div>
@@ -41,6 +41,12 @@ const App: React.FC = () => {
         />
       ))}
     </div>
+    <footer>
+      <p>
+        Creado por <a href="https://github.com/jhorman9/">Jhorman Nieto P</a>
+      </p>
+    </footer>
+    </>
   );
 };
 
