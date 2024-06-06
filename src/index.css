@@ -1,0 +1,131 @@
+.container {
+  position: relative;
+  background-image: url(/src/assets/579fe1183178475.653aa8931b193.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  max-width: 1920px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#root{
+  z-index: 2;
+  width: 100%;
+  padding: 14px;
+}
+
+h2{
+  text-align: center;
+}
+
+.code-container {
+  position: relative;
+  background-color: #1e1e1ee3;
+  padding: 20px;
+  border-radius: 5px;
+  color: #ffffff;
+  margin: 20px 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.code-container + p {
+  border-bottom: 2px solid #fff;
+  padding-bottom: 17px;
+}
+
+.code-container + p:last-child{
+  border-bottom: none;
+}
+
+.code-container pre{
+  text-wrap: wrap;
+}
+
+.copy-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.copy-button:hover {
+  background-color: #45a049;
+}
+pre {
+  margin: 0;
+}
+
+small{
+  font-weight: 700;
+}
+
+.image-banner, .image-banner img{
+  width: 100%;
+}
+
+.image-banner{
+  max-height: 500px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image-banner{
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+}
+
+.top-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-container select{
+  padding: 7px;
+  border-radius: 7px;
+}
+
+.top-container select {
+  background-color: transparent;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+  outline: none;
+  cursor: pointer;
+}
+
+.top-container option{
+  background-color: #ffffff;
+  color: #111;
+}
+
+section{
+  border: 1px solid #fff;
+  border-top: 1px dashed white;
+  border-bottom: 1px dashed white;
+  margin-bottom: 35px;
+  padding: 14px;
+}
