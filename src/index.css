@@ -150,11 +150,12 @@ small{
 }
 
 section{
-  border: 1px solid #fff;
-  border-top: 1px dashed white;
   border-bottom: 1px dashed white;
-  margin-bottom: 35px;
   padding: 14px;
+}
+
+section:last-child{
+  border: none;
 }
 
 footer{
