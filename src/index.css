@@ -128,6 +128,16 @@ small{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-radius: 7px;
+  margin-top: 35px;
+  padding: 0 14px;
+  position: sticky;
+  top: 14px;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 @media (max-width: 768px) {
@@ -149,7 +159,7 @@ small{
   font-size: 16px;
   outline: none;
   cursor: pointer;
-  border: 1px dashed;
+  border: transparent;
 }
 
 .top-container option{
