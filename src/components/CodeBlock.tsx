@@ -10,6 +10,21 @@ interface CodeBlockProps {
 
 const CodeBlock: React.FC<CodeBlockProps> = ({ code, language, title, description }) => {
   const codeRef = useRef<HTMLPreElement>(null);
+  
+  // useEffect(() => {
+  //   const fetchClipboardText = async () => {
+  //     try {
+  //       const text = await navigator.clipboard.readText();
+  //       console.log(text);
+  //     } catch (error) {
+  //       console.error('Failed to read clipboard contents: ', error);
+  //     }
+  //   };
+
+  //   fetchClipboardText();
+  // }, []);
+
+  
 
   const copyToClipboard = () => {
     if (codeRef.current) {
