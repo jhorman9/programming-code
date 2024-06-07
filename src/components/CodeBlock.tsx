@@ -1,5 +1,8 @@
-import React, { useRef } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useRef, useState } from 'react';
 import Swal from 'sweetalert2';
+import { faExpand, faXmark } from '@fortawesome/free-solid-svg-icons'; // Import the specific icon
+
 
 interface CodeBlockProps {
   code: string;
@@ -10,6 +13,7 @@ interface CodeBlockProps {
 
 const CodeBlock: React.FC<CodeBlockProps> = ({ code, language, title, description }) => {
   const codeRef = useRef<HTMLPreElement>(null);
+  const [isClicked, setIsClicked] = useState(false);
   
   // useEffect(() => {
   //   const fetchClipboardText = async () => {
@@ -56,6 +60,11 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ code, language, title, descriptio
     }
   };
 
+  const isClickedHandle = () => {
+    setIsClicked(!isClicked);
+  };
+
+
   return (
     <>
     <section>
@@ -63,9 +72,12 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ code, language, title, descriptio
       <small>{language}</small>
       <div className="code-container">
         <button className="copy-button" onClick={copyToClipboard}>Copiar</button>
-        <pre ref={codeRef}>
+        <pre ref={codeRef} style={isClicked ? {maxHeight: 'initial', overflow: 'auto'} : {maxHeight: '300px', overflowY: 'scroll'}}>
           {code}
         </pre>
+        <div className='absolute-view' title='Ver completo' onClick={isClickedHandle}>
+          <FontAwesomeIcon icon={isClicked ? faXmark : faExpand} />
+        </div>
       </div>
       <p>{description}</p>
     </section>
