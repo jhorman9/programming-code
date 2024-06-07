@@ -205,6 +205,12 @@ section{
   padding: 14px;
 }
 
+@media (max-width: 768px) {
+  section{
+    padding: 3.5px;
+  }
+}
+
 section:last-child{
   border: none;
 }
