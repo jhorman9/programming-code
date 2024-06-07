@@ -67,7 +67,7 @@ small {
 }
 
 .container-principal{
-  min-height: calc(-67px + 100vh);
+  min-height: calc(-57px + 100vh);
   height: 100%;
 }
 
