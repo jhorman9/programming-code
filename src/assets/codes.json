@@ -22,6 +22,12 @@
       "language": "NODEJS",
       "title": "Generador de claves aleatorias",
       "description": "Generador de claves aleatorias"
+    },
+    {
+      "code": "document.addEventListener(\"DOMContentLoaded\", function() {\n    const header = document.getElementById(\"myHeader\");\n    const headerTop = header.getBoundingClientRect().top;\n\n    window.addEventListener(\"scroll\", function() {\n        const scrollPosition = window.scrollY;\n\n        if (scrollPosition >= headerTop - 61) {\n            header.classList.add(\"fixedd\");\n        } else {\n            header.classList.remove(\"fixedd\");\n        }\n    });\n});\n\n//Cuando se hace un poco de scroll en el header \n// se agrega el fixed\n\nwindow.addEventListener('scroll', function() {\n    const clases = ['descripcion', 'modelos', 'planos', 'galeria', 'ubicacion', 'obra', 'contacto'];\n    let contenedorVisible = null;\n\n    clases.forEach(function(clase) {\n        const container = document.getElementById(clase);\n        const elements = document.querySelectorAll('.'+clase);\n        const rect = container.getBoundingClientRect();\n        const containerTop = rect.top;\n        const containerBottom = rect.bottom;\n        \n        console.log(containerBottom);\n        \n        if (containerBottom >= 200 && !contenedorVisible) {\n            console.log('Scroll dentro del contenedor:', clase);\n            contenedorVisible = clase;\n\n            elements.forEach(function(element) {\n                element.classList.add('active');\n            });\n        } else {\n            elements.forEach(function(element) {\n                element.classList.remove('active');\n            });\n        }\n    });\n});",
+      "language": "HTML, CSS, JAVASCRIPT",
+      "title": "Fixed header",
+      "description": "El primer bloque de código se encarga de agregar una clase CSS (fixedd) al encabezado (header) cuando el usuario hace scroll hacia abajo. Esto es útil para mantener el encabezado visible en la parte superior de la página mientras el usuario sigue desplazándose. El segundo bloque de código revisa si ciertos contenedores (descripcion, modelos, planos, galeria, ubicacion, obra, contacto) están visibles en la ventana de visualización. Si un contenedor específico está visible y su parte inferior está a 200 píxeles o más por encima del borde inferior de la ventana de visualización, se agrega la clase active a todos los elementos dentro de ese contenedor con la misma clase. Si el contenedor no está visible, la clase active se elimina."
     }
   ]
   
