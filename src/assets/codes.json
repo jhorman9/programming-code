@@ -16,6 +16,12 @@
       "language":"HTML, CSS, JAVASCRIPT",
       "title":"TAG modificado de un carousel",
       "description":"Su principal funcion es que al momento de insertar el tag se crea un carousel automaticamente"
+    },
+    {
+      "code": "const crypto = require('crypto');\n\nfunction generateSecretKey(length) {\n    const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';\n    let key = '';\n\n    for (let i = 0; i < length; i++) {\n        const randomIndex = Math.floor(crypto.randomBytes(4).readUInt32LE(0)/0xffffffff * charset.length);\n        key += charset.charAt(randomIndex);\n    }\n\n    return key;\n}\n\nmodule.exports = {\n    generateSecretKey\n};",
+      "language": "NODEJS",
+      "title": "Generador de claves aleatorias",
+      "description": "Generador de claves aleatorias"
     }
   ]
   

@@ -33,9 +33,9 @@ const App: React.FC = () => {
             <option value="Todos">Todos</option>
             <option value="PHP">Php</option>
             <option value="JavaScript">JavaScript</option>
+            <option value="NodeJs">NodeJs</option>
             <option value="HTML">Html</option>
-            <option value="CSS">Css
-            </option>
+            <option value="CSS">Css</option>
           </select>
         </div>
       </div>
