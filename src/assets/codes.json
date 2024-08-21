@@ -40,5 +40,11 @@
       "title": "Woocomerce insertar no disponible",
       "description": "Oculta el no disponible que trae por defecto woocomerce y se inserta uno personalizado encima de los textos, al contrario el anterior lo tenia encima de la imagen el cual tenia problemas de manejo personalizado",
       "language": "CSS, JAVASCRIPT"
+    },
+    {
+      "code": "<script>\n    const getPhoto = document.querySelectorAll('.itemsChange');\n    const insertPhoto = document.querySelector('.change-cars img');\n    const getPhoto1 = document.querySelectorAll('.itemsChangeinter');\n    const insertPhoto2 = document.querySelector('.change-cars-inter img');\n    \n    function updatePhoto(src, title, insert) {\n        insert.classList.add('fade-out');\n        setTimeout(() => {\n            insert.setAttribute('src', src);\n            insert.setAttribute('srcset', src);\n            insert.setAttribute('title', title);\n            insert.classList.remove('fade-out'); \n        }, 200); \n    }\n    \n    function classChange(class1, class2){\n        class1.forEach(photo => {\n            photo.addEventListener('mouseenter', () => {\n                const newSrc = photo.getAttribute('data-image');\n                const newTitle = photo.getAttribute('title');\n                newSrc == class2.src ? null : updatePhoto(newSrc, newTitle, class2);\n            });\n        });\n    }\n    \n    classChange(getPhoto, insertPhoto);\n    classChange(getPhoto1, insertPhoto2);\n</script>\n\n<style>\n.change-cars img, \n.change-cars-inter img {\n    transition: opacity 0.2s ease-in-out;\n    opacity: 1;\n}\n\n.change-cars img.fade-out, \n.change-cars-inter img.fade-out  {\n    opacity: 0;\n}\n</style>",
+      "title": "Image Update on Hover with Fade Effect",
+      "description": "Este código permite cambiar la imagen mostrada al usuario cuando se pasa el ratón sobre elementos específicos. Las imágenes se actualizan con un efecto de desvanecimiento suave, lo que proporciona una experiencia de usuario fluida y atractiva. Se puede aplicar a dos conjuntos diferentes de elementos e imágenes, ofreciendo una interfaz dinámica.",
+      "language": "CSS, JAVASCRIPT"
     }
   ]
