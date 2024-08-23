@@ -17,6 +17,7 @@
 
 *{
   scrollbar-width: 10px;
+
   scrollbar-color: black;
 }
 
@@ -61,8 +62,8 @@ small {
   box-shadow: 0 0 10px #ffffff40;
   padding: 7px 14px;
   border-radius: 7px;
-  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 
 }
 
@@ -168,9 +169,11 @@ small{
   z-index: 1;
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
+  -moz-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   padding: 14px;
+
 }
 
 @media (max-width: 768px) {
