@@ -23,6 +23,8 @@ const App: React.FC = () => {
         example.language.split(', ').map(lang => lang.toLowerCase()).includes(selectedLanguage.toLowerCase())
       );
 
+  filteredExamples.sort((a, b) => a.language.localeCompare(b.language));
+
   return (
     <>
     <div className='container-principal'>
