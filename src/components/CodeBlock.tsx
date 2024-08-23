@@ -72,7 +72,7 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ code, language, title, descriptio
       <small>{language}</small>
       <div className="code-container">
         <button className="copy-button" onClick={copyToClipboard}>Copiar</button>
-        <pre ref={codeRef} style={isClicked ? {maxHeight: 'initial', overflow: 'auto'} : {maxHeight: '300px', overflowY: 'scroll'}}>
+        <pre className={isClicked ? 'mh-initial overflow-hidden' : 'mh-300 overflowY-scroll'} ref={codeRef}>
           {code}
         </pre>
         <div className='absolute-view' title='Ver completo' onClick={isClickedHandle}>

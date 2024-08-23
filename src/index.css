@@ -237,3 +237,19 @@ footer p a{
   right: 15px;
   cursor: pointer;
 }
+
+.mh-initial{
+  max-height: initial !important;
+}
+
+.overflow-hidden{
+  overflow: hidden !important;
+}
+
+.mh-300{
+  max-height: 300px !important;
+}
+
+.overflowY-scroll{
+  overflow-y: scroll !important;
+}
