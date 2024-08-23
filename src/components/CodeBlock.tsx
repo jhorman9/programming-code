@@ -3,7 +3,6 @@ import React, { useRef, useState } from 'react';
 import Swal from 'sweetalert2';
 import { faExpand, faXmark } from '@fortawesome/free-solid-svg-icons'; // Import the specific icon
 
-
 interface CodeBlockProps {
   code: string;
   language?: string;
@@ -14,21 +13,6 @@ interface CodeBlockProps {
 const CodeBlock: React.FC<CodeBlockProps> = ({ code, language, title, description }) => {
   const codeRef = useRef<HTMLPreElement>(null);
   const [isClicked, setIsClicked] = useState(false);
-  
-  // useEffect(() => {
-  //   const fetchClipboardText = async () => {
-  //     try {
-  //       const text = await navigator.clipboard.readText();
-  //       console.log(text);
-  //     } catch (error) {
-  //       console.error('Failed to read clipboard contents: ', error);
-  //     }
-  //   };
-
-  //   fetchClipboardText();
-  // }, []);
-
-  
 
   const copyToClipboard = () => {
     if (codeRef.current) {
